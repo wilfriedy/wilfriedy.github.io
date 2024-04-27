@@ -1,0 +1,130 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "EuclidCircularA-Medium";
+  src: url("./assets/EuclidCircularA-Medium-WebXL.ttf");
+}
+@font-face {
+  font-family: "EuclidCircularA-Regular";
+  src: url("./assets/EuclidCircularA-Regular-WebXL.ttf");
+}
+@font-face {
+  font-family: "ValueSerif-Regular";
+  src: url("./assets/ValueSerif-Regular.ttf");
+}
+
+:root {
+  --color-bg-dark: #100f0f;
+  --color-bg-dark-light: #171616;
+  --color-txt-white: #ffffff;
+  --color-txt-grey-white: #cecdc3;
+  --color-txt-orange: #fb4219;
+  --color-txt-orange-light: #fb42191a;
+  --txt-euclid-reg: "EuclidCircularA-Regular";
+  --txt-euclid-mid: "EuclidCircularA-Medium";
+  --txt-value-serif: "ValueSerif-Regular";
+}
+
+/* commons */
+ul > li,
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: var(--color-bg-dark);
+  color: var(--color-txt-white);
+  padding: 0px 100px;
+  font-family: var(--txt-euclid-reg);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvas {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  gap: 20px;
+}
+
+/* items */
+.side-bar {
+  /* border: 1px solid red; */
+  flex-basis: 40%;
+  padding: 40px 15px;
+}
+
+.main-content {
+  /* border: 1px solid red; */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 55px;
+}
+
+/* main content */
+.tabs-content-display {
+  background-color: var(--color-bg-dark-light);
+  padding: 25px 15px;
+  min-height: 300px;
+}
+.welcome-hero {
+  font-size: 48px;
+  font-family: var(--txt-value-serif);
+  margin-bottom: 40px;
+}
+
+.welcome-paragraph {
+  font-size: 15;
+}
+
+/* .work-experiences */
+.work-exp-title {
+  color: var(--color-txt-orange);
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.accordion-wrapper {
+  background-color: var(--color-bg-dark-light);
+  padding: 25px 15px;
+  min-height: 300px;
+}
+
+.icon-accordion::after {
+  content: "\276F";
+}
+
+/* side bar style */
+.contact-icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-item {
+  padding: 5px 8px;
+  background-color: var(--color-txt-orange-light);
+  border-radius: 5px;
+}
+
+.icon-link > i {
+  font-size: 25px;
+  color: var(--color-txt-orange);
+}
+
+.projects {
+  margin-top: 25px;
+}
