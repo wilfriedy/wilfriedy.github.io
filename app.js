@@ -20,13 +20,13 @@ const store = {
 };
 
 // get the side bars
-const projectSideBar = document.querySelector(".project-side-tab");
+const projectSideBar = document.querySelector(".projects-list");
 const allProjectsTitle = document.querySelectorAll(".project-title");
 // accordions
-const accordionItem = document.querySelector(".accordion-item");
-const accordionItemContainer = document.querySelector(
-  ".accordion-item-container"
-);
+const accordionWrapper = document.querySelector(".accordion-wrapper");
+// const accordionItemContainer = document.querySelector(
+//   ".accordion-item-container"
+// );
 
 //section where the tabs will be displayed
 const tabsContentDisplay = document.querySelector(".tabs-content-display");
@@ -48,14 +48,15 @@ function updateActiveTabUI() {
 
 function updateAccordionUI() {
   const { currentActiveAccordion } = store.getState();
-  const allAccordionItems = document.querySelectorAll(".accordion-item");
-  allAccordionItems.forEach((item, index) => {
-    item.classList.toggle("active-accordion", index === currentActiveAccordion);
+  const allAccordionBody = document.querySelectorAll(".accordion-body");
+  allAccordionBody.forEach((item, index) => {
+    if (index === currentActiveAccordion) {
+      item.style.maxHeight = item.scrollHeight + "px";
+    } else {
+      item.style.maxHeight = 0 + "px";
+    }
   });
 }
-
-store.subscribe(updateActiveTabUI);
-store.subscribe(updateAccordionUI);
 
 projectSideBar.addEventListener("click", (e) => {
   const targetClick = e.target.closest(".project-title");
@@ -63,3 +64,14 @@ projectSideBar.addEventListener("click", (e) => {
   const position = +targetClick.dataset.pos;
   store.updateState("currentTab", position);
 });
+
+// accordion
+accordionWrapper.addEventListener("click", (e) => {
+  const accordionItem = e.target.closest(".accordion-head");
+  if (!accordionItem) return;
+  const position = +accordionItem.dataset.accordionActive;
+  store.updateState("currentActiveAccordion", position);
+});
+
+store.subscribe(updateActiveTabUI);
+store.subscribe(updateAccordionUI);
