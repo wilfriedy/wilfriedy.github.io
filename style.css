@@ -78,6 +78,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
+  margin-top: 10px;
 }
 
 .icon-item {
@@ -150,23 +151,34 @@ body {
 /* .work-experiences */
 .work-exp-title {
   color: var(--color-txt-orange);
-  font-size: 15px;
+  font-size: 18px;
   margin-bottom: 5px;
 }
+
 .accordion-wrapper {
   background-color: var(--color-bg-dark-light);
   padding: 25px 15px;
   min-height: 300px;
   border-radius: 15px;
 }
+
+.accordion-head.active-accordion-index .icon-accordion {
+  transform: rotate(-90deg);
+}
+
+.icon-accordion {
+  transition: transform 0.3s ease;
+}
 .icon-accordion::after {
   content: "\276F";
 }
+
 .accordion-item {
   border-bottom: 0.5px solid var(--color-txt-orange-light);
   padding: 5px 0px;
   margin-bottom: 15px;
 }
+
 .accordion-head {
   display: flex;
   justify-content: space-between;
@@ -176,11 +188,12 @@ body {
 
 .company-name {
   color: var(--color-txt-grey-white);
+  font-size: 15px;
 }
 
 .role-title {
   color: var(--color-txt-orange);
-  font-size: 14px;
+  font-size: 12px;
   text-transform: uppercase;
 }
 

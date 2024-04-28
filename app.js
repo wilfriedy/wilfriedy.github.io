@@ -21,7 +21,7 @@ const store = {
 
 // get the side bars
 const projectSideBar = document.querySelector(".projects-list");
-const allProjectsTitle = document.querySelectorAll(".project-title");
+const allProjectsTitle = document.querySelectorAll(".project-item");
 // accordions
 const accordionWrapper = document.querySelector(".accordion-wrapper");
 // const accordionItemContainer = document.querySelector(
@@ -34,6 +34,7 @@ const contentDisplay = [{ title: "Project name", description: "description" }]; 
 
 function updateActiveTabUI() {
   const { currentTab } = store.getState();
+  console.log(currentTab);
   allProjectsTitle.forEach((projectTitle, index) => {
     if (index === currentTab) {
       projectTitle.classList.add("active-tab");
@@ -41,26 +42,30 @@ function updateActiveTabUI() {
       projectTitle.classList.remove("active-tab");
     }
   });
-  if (currentTab != null && contentDisplay[currentTab]) {
-    tabsContentDisplay.innerHTML = contentDisplay[currentTab];
-  }
+  // if (currentTab != null && contentDisplay[currentTab]) {
+  //   tabsContentDisplay.innerHTML = contentDisplay[currentTab];
+  // }
 }
 
 function updateAccordionUI() {
   const { currentActiveAccordion } = store.getState();
   const allAccordionBody = document.querySelectorAll(".accordion-body");
   allAccordionBody.forEach((item, index) => {
+    const header = item.previousElementSibling;
     if (index === currentActiveAccordion) {
+      header.classList.add("active-accordion-index");
       item.style.maxHeight = item.scrollHeight + "px";
     } else {
+      header.classList.remove("active-accordion-index");
       item.style.maxHeight = 0 + "px";
     }
   });
 }
 
 projectSideBar.addEventListener("click", (e) => {
-  const targetClick = e.target.closest(".project-title");
+  const targetClick = e.target.closest(".project-item");
   if (!targetClick) return;
+  console.log(targetClick);
   const position = +targetClick.dataset.pos;
   store.updateState("currentTab", position);
 });
