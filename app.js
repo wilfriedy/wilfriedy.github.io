@@ -1,7 +1,9 @@
+import { projectsData } from "./projects.js";
+
 const store = {
   state: {
     currentTab: null, // this is because i want to display a different content inside tabsContentDisplay and active only when clicked
-    currentActiveAccordion: 0,
+    currentActiveAccordion: null,
   },
   listeners: [],
 
@@ -24,17 +26,27 @@ const projectSideBar = document.querySelector(".projects-list");
 const allProjectsTitle = document.querySelectorAll(".project-item");
 // accordions
 const accordionWrapper = document.querySelector(".accordion-wrapper");
-// const accordionItemContainer = document.querySelector(
-//   ".accordion-item-container"
-// );
 
 //section where the tabs will be displayed
 const tabsContentDisplay = document.querySelector(".tabs-content-display");
-const contentDisplay = [{ title: "Project name", description: "description" }]; // this is just a mock version of the actual data
+// mobile nav
+const sideBarBtn = document.querySelector(".click-open");
+const sideBar = document.querySelector(".side-bar");
+
+sideBarBtn.addEventListener("click", (e) => {
+  const sideBarIsOpen = sideBar.classList.contains("opened-side-bar");
+  const closeIcon = sideBarBtn.firstChild;
+  if (sideBarIsOpen) {
+    sideBar.classList.remove("opened-side-bar");
+    closeIcon.className = "ph ph-arrow-square-right";
+  } else {
+    sideBar.classList.add("opened-side-bar");
+    closeIcon.className = "ph ph-arrow-square-left";
+  }
+});
 
 function updateActiveTabUI() {
   const { currentTab } = store.getState();
-  console.log(currentTab);
   allProjectsTitle.forEach((projectTitle, index) => {
     if (index === currentTab) {
       projectTitle.classList.add("active-tab");
@@ -42,9 +54,9 @@ function updateActiveTabUI() {
       projectTitle.classList.remove("active-tab");
     }
   });
-  // if (currentTab != null && contentDisplay[currentTab]) {
-  //   tabsContentDisplay.innerHTML = contentDisplay[currentTab];
-  // }
+  if (currentTab != null && projectsData[currentTab]) {
+    tabsContentDisplay.innerHTML = projectsData[currentTab].description;
+  }
 }
 
 function updateAccordionUI() {
