@@ -69,7 +69,7 @@ body {
 }
 
 .click-open > i {
-  font-size: var(--font-xlx);
+  font-size: 30px;
   color: var(--color-txt-orange);
   position: fixed;
   cursor: pointer;
