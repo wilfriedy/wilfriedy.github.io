@@ -257,6 +257,13 @@ body {
   font-size: 14px;
 }
 
+/* ul#experience-listing {
+  list-style: initial;
+}
+ul#experience-listing > li {
+  list-style-type: square !important;
+} */
+
 /* --------------- */
 
 @media (min-width: 768px) {

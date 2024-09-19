@@ -77,7 +77,6 @@ function updateAccordionUI() {
 projectSideBar.addEventListener("click", (e) => {
   const targetClick = e.target.closest(".project-item");
   if (!targetClick) return;
-  console.log(targetClick);
   const position = +targetClick.dataset.pos;
   store.updateState("currentTab", position);
 });
