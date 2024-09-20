@@ -257,6 +257,18 @@ body {
   font-size: 14px;
 }
 
+/* project description */
+
+.project-des-brief {
+  margin: 15px 0px;
+  color: var(--color-txt-orange);
+}
+
+.features-listing-des {
+  font-size: 14px;
+  margin: 20px 0px;
+}
+
 /* ul#experience-listing {
   list-style: initial;
 }
