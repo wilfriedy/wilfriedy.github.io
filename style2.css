@@ -1,0 +1,134 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "EuclidCircularA-Medium";
+  src: url("./assets/EuclidCircularA-Medium-WebXL.ttf");
+}
+@font-face {
+  font-family: "EuclidCircularA-Regular";
+  src: url("./assets/EuclidCircularA-Regular-WebXL.ttf");
+}
+@font-face {
+  font-family: "ValueSerif-Regular";
+  src: url("./assets/ValueSerif-Regular.ttf");
+}
+
+:root {
+  --color-bg-dark: #100f0f;
+  --color-bg-dark-light: #171616;
+  --color-txt-white: #ffffff;
+  --color-txt-grey-white: #cecdc3;
+  --color-txt-orange: #fb4219;
+  --color-txt-orange-light: #fb42191a;
+  --txt-euclid-reg: "EuclidCircularA-Regular";
+  --txt-euclid-mid: "EuclidCircularA-Medium";
+  --txt-value-serif: "ValueSerif-Regular";
+  --font-min: 10px;
+  --font-sm: 12px;
+  --font-smx: 14px;
+  --font-md: 15px;
+  --font-mdx: 18px;
+  --font-lg: 20px;
+  --font-lgx: 22px;
+  --font-xl: 25px;
+  --font-xlx: 48px;
+}
+
+/* commons */
+ul > li,
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: var(--color-bg-dark);
+  color: var(--color-txt-white);
+  font-family: var(--txt-euclid-reg);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding-top: 20px; */
+}
+
+/* layout */
+.canvas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+  /* background-color: #d9fb19; */
+  padding: 10px 15px;
+  gap: 20px;
+}
+
+.side-contact {
+  width: 20%;
+  /* border: 1px solid red; */
+}
+
+.main-content {
+  width: 80%;
+  padding: 4px;
+}
+
+.welcome-hero {
+  font-size: var(--font-xlx);
+  font-family: var(--txt-value-serif);
+  margin-bottom: 20px;
+}
+
+#details-section {
+  margin: 20px 0px;
+}
+
+.sections-header-title {
+  color: var(--color-txt-orange);
+  font-size: 20px;
+}
+
+#content-box {
+  background-color: var(--color-bg-dark-light);
+  padding: 25px 15px;
+  min-height: 300px;
+  border-radius: 15px;
+}
+
+.sections-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.carousel-util {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.steps-track {
+  font-size: 12px;
+}
+
+#carousel-btn {
+  background-color: var(--color-bg-dark-light);
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
