@@ -5,7 +5,7 @@ export const experiences = [
     year: "2023-",
     website: "https://www.reshiito.com/",
     description: `
-    <ul>
+    <ul class="list-epxr">
         <li>
             Led backend development using <b>Node.js, GraphQL, PostgreSQL, and Redis</b> for background job processing.
         </li>
@@ -33,7 +33,7 @@ export const experiences = [
     year: "Aug 2023 - Jan 2024",
     website: "https://www.chapelhive.com/",
     description: `
-    <ul>
+    <ul class="list-epxr">
         <li>
             Developed and maintained frontend features using <b>React and GraphQL</b> to enhance user experience and engagement.
         </li>
@@ -55,7 +55,7 @@ export const experiences = [
     year: "Mar 2022 - Sept 2022",
     website: "http://gems-consult.com/",
     description: `
-    <ul>
+    <ul class="list-epxr">
         <li>
             Gained hands-on experience with <b>Microsoft Dynamics 365</b> and developed custom solutions using <b>AL (Application Language)</b>.
         </li>
@@ -74,7 +74,7 @@ export const experiences = [
     year: "May 2021 - Apr 2022",
     website: "https://www.bbgnigeria.com/",
     description: `
-    <ul>
+    <ul class="list-epxr">
         <li>
             Developed and maintained the organization’s website using <b>PHP</b> and <b>WordPress</b>.
         </li>

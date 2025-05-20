@@ -212,14 +212,39 @@ body {
 
   .main-content {
     width: 100%;
+    margin-top: 150px;
   }
 
   .side-contact {
     width: 100%;
     /* border: 1px solid red; */
+
+    position: fixed;
+    z-index: 400;
+    height: 100px;
   }
 
   .welcome-paragraph {
     font-size: var(--font-smx);
+  }
+
+  .welcome-hero {
+    font-size: var(--font-xl);
+  }
+
+  .experience-period {
+    font-size: var(--font-sm) !important;
+  }
+
+  .company-name {
+    font-size: var(--font-smx);
+  }
+
+  .list-epxr > li {
+    font-size: var(--font-smx);
+  }
+
+  body {
+    min-height: 100vh;
   }
 }
