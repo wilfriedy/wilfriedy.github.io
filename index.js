@@ -17,7 +17,7 @@ const handleSetExperienceContent = (step) => {
             <div class="box-content-top">
               <div class="">
                 <h3 class="company-name">${company_name}</h3>
-                <a href="${website}">Website</a>
+                <a href="${website}"  target="_blank">Website</a>
               </div>
               <p class="experience-period">${year}</p>
             </div>
