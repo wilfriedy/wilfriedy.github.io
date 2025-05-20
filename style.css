@@ -205,6 +205,9 @@ body {
 @media (max-width: 768px) {
   .canvas {
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh;
   }
 
   .main-content {
@@ -213,6 +216,7 @@ body {
 
   .side-contact {
     width: 100%;
+    /* border: 1px solid red; */
   }
 
   .welcome-paragraph {
