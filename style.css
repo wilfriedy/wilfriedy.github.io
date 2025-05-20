@@ -212,16 +212,16 @@ body {
 
   .main-content {
     width: 100%;
-    margin-top: 150px;
+    /* margin-top: 150px; */
   }
 
   .side-contact {
     width: 100%;
     /* border: 1px solid red; */
 
-    position: fixed;
-    z-index: 400;
-    height: 100px;
+    /* position: fixed;
+    z-index: 400; */
+    height: 120px;
   }
 
   .welcome-paragraph {
@@ -237,7 +237,7 @@ body {
   }
 
   .company-name {
-    font-size: var(--font-smx);
+    font-size: var(--font-md);
   }
 
   .list-epxr > li {
