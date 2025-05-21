@@ -31,7 +31,7 @@ export const experiences = [
     company_name: "Chapelhive",
     role: "Frontend developer",
     year: "Aug 2023 - Jan 2024",
-    website: "https://www.chapelhive.com/",
+    website: "https://www.linkedin.com/company/chapelhive/about/",
     description: `
     <ul class="list-epxr">
         <li>
